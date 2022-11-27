@@ -1,0 +1,42 @@
+Como el método visto en clase usa que los elementos de la diagonal
+principal deben ser no ceros para dividir por ellos no se puede 
+aplicar ese método porque tarde o temprano vamos a tener que dividir
+por cero para obtener un valor de la variable x. Por eso diseñé este
+método particular para esta matriz en específico.
+
+Tenemos que resolver la matriz 12x12:
+| 1  0  0  0  ...  0| |fi0 |   |b0 |
+|-1  0  1  0  ...  0| |fi1 |   |b1 |
+| 0 -1  0  1  ...  0| |    |   |   |
+|          .        | | .  |   | . |
+|            .      | | .  | = | . | 
+|              .    | | .  |   | . |
+|           -1  0  1| |    |   |   |
+|            0  0  1| |fi11|   |b11|
+
+La convertimos a una matriz de 10x10:
+| 0  1  0  0  ...  0| |fi1 |   | b1+b0 |
+|-1  0  1  0  ...  0| |fi2 |   |   b2  |
+| 0 -1  0  1  ...  0| |    |   |       |
+|          .        | | .  |   |   .   |
+|            .      | | .  | = |   .   | 
+|              .    | | .  |   |   .   |
+|           -1  0  1| |    |   |       |
+|            0 -1  0| |fi10|   |b10-b11|
+
+Observamos que para los índices impares de (b) se tiene:
+b[1] =  fi2
+b[3] = -fi2 + fi4
+b[5] = -fi4 + fi6
+b[7] = -fi6 + fi8
+b[9] = -fi8 + fi10
+Es decir, a partir de b[1] = fi2, podemos obtener los fik con k par,
+solamente sumando cada ecuación con la siguiente.
+Análogamente se tiene para los índices pares de (b):
+b[10] = -fi9
+b[8]  =  fi9 - fi7
+b[6]  =  fi7 - fi5
+b[4]  =  fi5 - fi3
+b[2]  =  fi3 - fi1
+Entonces a partir de 10 podemos obtener los fik con k impar.
+Aplicando este método encontramos la solución de (fi).

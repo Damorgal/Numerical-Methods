@@ -1,0 +1,30 @@
+
+
+Para las pruebas de cada ejercicio, use cada pareja de archivos
+de la matriz y el vector de terminos independientes que tengan
+el mismo indice:
+
+Para el ejercicio 3, usar las parejas
+    -- diagonal1.bin   vectorb1.bin
+    -- diagonal2.bin   vectorb2.bin
+
+
+Para el ejercicio 4, usar las parejas
+    -- matrizL3.bin   vectorb3.bin
+    -- matrizL4.bin   vectorb4.bin
+
+
+Para el ejercicio 5, usar las parejas
+    -- matrizU3.bin   vectorb3.bin
+    -- matrizU4.bin   vectorb4.bin
+
+
+Para el ejercicio 6, usar las parejas
+    -- matrizA5.bin   vectorb5.bin
+    -- matrizA6.bin   vectorb6.bin
+    -- matrizA7.bin   vectorb7.bin
+
+
+
+   
+

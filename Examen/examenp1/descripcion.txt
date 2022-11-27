@@ -1,0 +1,36 @@
+Descripcion:
+Para el examen junte todas las funciones que vimos en las tareas y las puse en la libreria "funciones.hpp"
+Los archivos "funciones.hpp" y "funciones.cpp" los adjunto en la carpeta, los cuales deben estar donde se
+encuentre el main para que pueda compilar.
+La funcion del ejercicio 4, la de la norma infinito ya la habia implementado en las tareas, así que esta
+se encuentra en el .hpp.
+
+Para compilar: g++ -o pro main.cpp -fopenmp
+Para ejecutar:  ./pro 4
+		./pro 8
+		./pro 16
+
+Ejemplo:
+damorgal@damorgal-hp-envy:~/Documents/Clase Met_Num/Examen/examenp1$ g++ -o pro main.cpp -fopenmp
+damorgal@damorgal-hp-envy:~/Documents/Clase Met_Num/Examen/examenp1$ ./pro 4El numero de operaciones realizadas para encontrar los valores propios fue:
+1000
+Y el valor de la toleracia es: 2.436268 para toleracia inicial de 0.000001
+
+El numero de condicion k2 = s1 / s2 es: 6.844370
+El numero de condicion kinf = ||A||inf||A^-1||inf es: 640.000000
+La norma ||x1 - x2|| es: 0.203291
+damorgal@damorgal-hp-envy:~/Documents/Clase Met_Num/Examen/examenp1$ ./pro 8El numero de operaciones realizadas para encontrar los valores propios fue:
+1000
+Y el valor de la toleracia es: 4.555023 para toleracia inicial de 0.000001
+
+El numero de condicion k2 = s1 / s2 es: 7.259045
+El numero de condicion kinf = ||A||inf||A^-1||inf es: 2702995.911111
+La norma ||x1 - x2|| es: 513.187451
+damorgal@damorgal-hp-envy:~/Documents/Clase Met_Num/Examen/examenp1$ ./pro 16El numero de operaciones realizadas para encontrar los valores propios fue:
+1000
+Y el valor de la toleracia es: 8.825482 para toleracia inicial de 0.000001
+
+El numero de condicion k2 = s1 / s2 es: 7.507392
+El numero de condicion kinf = ||A||inf||A^-1||inf es: 46303543878768.250000
+La norma ||x1 - x2|| es: 5211036031.335579
+

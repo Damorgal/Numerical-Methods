@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1504810056 source:/home/damorgal/Documents/Clase Met_Num/Paralelizacion/producto_punto/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<sys/time.h>
+	<omp.h>
+

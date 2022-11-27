@@ -1,0 +1,173 @@
+
+CODIGO:     vectorGsl.c
+
+DESCRIPCION:
+Lee un archivo que tiene un arreglo 1D y un escalar. 
+Multiplica los elementos del vector por el escalar y escribe el 
+resultado en un archivo binario.
+
+COMPILACION:
+gcc -o vectorGsl vectorGsl.c  -lgsl -lgslcblas -lm
+
+
+EJECUCION:
+./vectorGsl v1.bin  3
+
+
+SALIDA:
+Vector en el archivo v1.bin:
+  0.00     3.00     6.00     9.00    12.00   
+
+Vector escalado por el factor 3.000000:
+  0.00     9.00    18.00    27.00    36.00   
+
+Salida almacena en scaledv1.bin
+
+
+/////////////////////////////////////////////////////////////////
+
+
+CODIGO:     matricesGsl1.c
+
+DESCRIPCION:
+Lee un archivo que tiene un arreglo 2D y un escalar desde la 
+linea de comandos.  
+Usando las funciones de GSL, multiplica las entradas de la matriz 
+por el escalar y la matriz resultante la almacena  en un archivo.
+
+
+COMPILACION:
+gcc -o matricesGsl1 matricesGsl1.c  -lgsl -lgslcblas -lm
+
+
+EJECUCION:
+./matricesGsl1 matA1.bin  3
+
+
+SALIDA:
+Matriz en el archivo matA1.bin:
+  9.00     8.00     7.00     6.00     5.00   
+ 18.00    17.00    15.00    13.00    11.00   
+ 27.00    26.00    22.00    19.00    16.00   
+ 36.00    35.00    29.00    27.00    24.00   
+ 45.00    44.00    36.00    35.00    37.00   
+
+Matriz escalada por el factor 3.000000:
+ 27.00    24.00    21.00    18.00    15.00   
+ 54.00    51.00    45.00    39.00    33.00   
+ 81.00    78.00    66.00    57.00    48.00   
+ 108.00    105.00    87.00    81.00    72.00   
+ 135.00    132.00    108.00    105.00    111.00   
+
+Salida almacena en scaledmatA1.bin
+
+
+/////////////////////////////////////////////////////////////////
+
+
+CODIGO:     matricesGsl2.c
+
+DESCRIPCION:
+Lee un archivo que tiene un arreglo 2D y un escalar desde la 
+linea de comandos.  
+Es igual a matricesGsl1.c, solo que que accesa directamente
+al arreglo data de la estructura gsl_matrix para modificar sus valores.
+
+COMPILACION:
+gcc -o matricesGsl2 matricesGsl2.c  -lgsl -lgslcblas -lm
+
+
+EJECUCION:
+./matricesGsl2 matA1.bin  3
+
+
+SALIDA:
+Matriz en el archivo matA1.bin:
+  9.00     8.00     7.00     6.00     5.00   
+ 18.00    17.00    15.00    13.00    11.00   
+ 27.00    26.00    22.00    19.00    16.00   
+ 36.00    35.00    29.00    27.00    24.00   
+ 45.00    44.00    36.00    35.00    37.00   
+
+Matriz escalada por el factor 3.000000:
+ 27.00    24.00    21.00    18.00    15.00   
+ 54.00    51.00    45.00    39.00    33.00   
+ 81.00    78.00    66.00    57.00    48.00   
+ 108.00    105.00    87.00    81.00    72.00   
+ 135.00    132.00    108.00    105.00    111.00   
+
+Salida almacena en scaledmatA1.bin
+
+
+
+/////////////////////////////////////////////////////////////////
+
+CODIGO:     luGsl.c
+
+DESCRIPCION:
+Resuelve un sistema de ecuaciones lineales mediante 
+factorizacion LU, usando la libreria GSL.
+
+El programa lee desde la linea de comandos los nombres de los archivos 
+binarios que contienen las entradas de la matriz y el vector.
+
+El programa calcula la factorizacion, resuelve el sistema de ecuaciones,
+y calcula el error ||Ax-b||.
+
+COMPILACION:
+gcc -o luGsl luGsl.c  -lgsl -lgslcblas -lm
+
+EJECUCION:
+./luGsl matA1.bin vecb1.bin
+
+SALIDA:
+
+Tama~no de la matriz: 5 x 5
+Solucion del sistema:
+  3.00    -4.00     0.00     1.00     8.00   
+Error en la solucion del sistema: 3.480934e-14
+
+
+
+
+/////////////////////////////////////////////////////////////////
+
+CODIGO:     luGsl2.c
+
+DESCRIPCION:
+Resuelve un sistema de ecuaciones lineales mediante 
+factorizacion LU, usando la libreria GSL.
+
+Hace lo mismo que el programa luGsl. La diferencia
+es que usa las funciones de lectura de archivos vistas en la clase 5,
+que para el caso de la matriz, permite que sus entradas sean accesadas 
+por un doble apuntador.
+
+El programa muestra como pasar esta informacion a vectores y matrices de
+GSL.
+
+
+COMPILACION:
+gcc -o luGsl2 luGsl2.c  -lgsl -lgslcblas -lm
+
+EJECUCION:
+./luGsl2 matA1.bin vecb1.bin
+
+SALIDA:
+
+Vector de entrada:
+ 41.0000    87.0000    124.0000    187.0000    290.0000   
+
+Matrix de entrada:
+  9.00     8.00     7.00     6.00     5.00   
+ 18.00    17.00    15.00    13.00    11.00   
+ 27.00    26.00    22.00    19.00    16.00   
+ 36.00    35.00    29.00    27.00    24.00   
+ 45.00    44.00    36.00    35.00    37.00   
+
+Solucion:
+  3.0000    -4.0000     0.0000     1.0000     8.0000   
+
+
+
+

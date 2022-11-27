@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1505522631 source:/home/damorgal/Documents/Clase Met_Num/Tarea-3_solucionEcuaciones/Matriz_diagonal/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

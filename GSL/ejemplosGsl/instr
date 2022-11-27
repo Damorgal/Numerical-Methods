@@ -1,0 +1,28 @@
+
+gcc -o vectorGsl vectorGsl.c  -lgsl -lgslcblas -lm
+gcc -o matricesGsl1 matricesGsl1.c  -lgsl -lgslcblas -lm
+gcc -o matricesGsl2 matricesGsl2.c  -lgsl -lgslcblas -lm
+gcc -o luGsl luGsl.c  -lgsl -lgslcblas -lm
+gcc -o luGsl2 luGsl2.c  -lgsl -lgslcblas -lm
+
+
+echo "[**] PROGRAMA: vectorGsl    "
+./matricesGsl1 matA1.bin  3
+
+
+echo "   "
+echo "[**] PROGRAMA: matricesGsl1 "
+./matricesGsl2 matA1.bin  3
+
+
+echo "   "
+echo "[**] PROGRAMA: luGsl "
+./luGsl matA1.bin vecb1.bin
+
+
+
+echo "   "
+echo "[**] PROGRAMA: luGsl2 "
+./luGsl2 matA1.bin vecb1.bin
+
+

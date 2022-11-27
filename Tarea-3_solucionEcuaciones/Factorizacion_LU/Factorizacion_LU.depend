@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1505688751 source:/home/damorgal/Documents/Clase Met_Num/Tarea-3_solucionEcuaciones/Factorizacion_LU/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

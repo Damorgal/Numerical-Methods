@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1507508591 source:/home/damorgal/Documents/Clase Met_Num/Tarea-6_PotenciaInversa/potencia_inversa/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<omp.h>
+	<iostream>
+	<gsl/gsl_math.h>
+
